@@ -22,6 +22,11 @@
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </h1>
 
+    {{- /* Subtitle */ -}}
+    {{- with $params.subtitle -}}
+        <h2 class="single-subtitle">{{ . }}</h2>
+    {{- end -}}
+
     {{- /* Meta */ -}}
     <div class="post-meta">
         <!-- {{- $author := $params.author | default .Site.Author.name | default (T "author") -}}
